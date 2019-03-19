@@ -15,6 +15,9 @@ onComplete(). Entonces, este reproducira todas las emisiones contra el segundo O
 y llamara onComplete(). Ellos, ambos, recibiran el mismo dataSet al obtener dos streams
 separados cada uno, que es el tipico comportamiento de un Cold Observable.
 
+Podemos concluir que los Observables sources que emiten datasets finitos son usualmente
+"cold".
+
  */
 
 public class ColdObservables {
