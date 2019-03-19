@@ -8,7 +8,7 @@ Con ConnectableObservable es una forma de convertir Cold Observables a Hot Obser
 En este ejemplo vamos a ve lo siguiente:
 
 Notamos como un Observer esta recibiendo el String mientras el otro esta recibiendo la longitud
-y el segundo esta pintandolos en un estilo intercalado. Ambas suscripciones estan siendo
+y los dos esta pintandolos en un estilo intercalado. Ambas suscripciones estan siendo
 configuradas de antemano, y el connect() es llamado para disparar las emisiones. En cambio que
 Observer 1 procesando todas las emisiones antes Observer 2, cada emision va a cada Observer
 simultaneamente. Observer 1 recibe Alpha y Observer 2 recibe 5 y entonces Beta y 4, y etc.

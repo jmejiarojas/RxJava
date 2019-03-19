@@ -3,7 +3,7 @@ package learningRxJava;
 import io.reactivex.Observable;
 
 /*
-Incluso si el segundo Observer transforma estas emisiones con operadores, seguira tendiendo
+Incluso si el segundo Observer transforma estas emisiones con operadores, seguira teniendo
 su propio stream de emisiones. Usando operadores tales como map() o filter() contra un
 Cold Observable todavia mantendra la naturaleza "COLD" de los Observables cedidos.
  */
