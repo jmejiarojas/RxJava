@@ -1,4 +1,4 @@
-package learningRxJava;
+package learningRxJava.observables;
 
 import io.reactivex.observables.ConnectableObservable;
 

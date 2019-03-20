@@ -1,4 +1,4 @@
-package learningRxJava;
+package learningRxJava.observables;
 
 /*
 Cuando nosotros usamos Just, implicitamente ya estamos invocando al metodo OnNext y al metodo OnComplete

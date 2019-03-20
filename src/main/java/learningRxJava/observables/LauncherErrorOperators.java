@@ -1,8 +1,8 @@
-package learningRxJava;
+package learningRxJava.observables;
 
 import io.reactivex.Observable;
 
-public class LauncherErrorOperatorImproved {
+public class LauncherErrorOperators {
 
   public static void main(String[] args) {
 
@@ -22,12 +22,15 @@ public class LauncherErrorOperatorImproved {
 
     // Se quiere que se almacene en un Observable de Integers con las longitudes de las cadenas
     // Luego se va a filtrar los que la longitud sea mayor o igual a 5
-    // Por ultimo imprimimos los valores
-    source
-            .map( x -> x.length())
-            .filter( x -> x >= 5)
-            .subscribe(System.out::println, Throwable::printStackTrace);
+    Observable<Integer> lenghts = source
+            .map( x -> x.length());
 
+    Observable<Integer> filters = lenghts
+            .filter( x -> x >= 5);
+
+    // Imprimimos los valores en la consola
+    filters
+            .subscribe(System.out::println, Throwable::printStackTrace);
 
   }
 
