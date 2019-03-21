@@ -3,13 +3,13 @@ package learningRxJava.operators;
 import io.reactivex.Observable;
 
 /*
-El operador take() tiene dos sobrecargas. Uno tomara un numero especifico de emisiones
+El operador Take() tiene dos sobrecargas. Uno tomara un numero especifico de emisiones
 y entonces llamara onComplete() despues de capturar a todos ellos. Este tambien "dispose"
-de toda la transmision para que no se produzcan mas emisiones. Por ejemplo, take(3)
+de toda la transmision para que no se produzcan mas emisiones. Por ejemplo, Take(3)
 emitira el primer 3 emisiones y luego invocara a onComplete().
  */
 
-public class take {
+public class Take {
 
   public static void main(String[] args) {
 

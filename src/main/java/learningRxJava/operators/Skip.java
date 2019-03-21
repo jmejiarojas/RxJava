@@ -4,12 +4,12 @@ import io.reactivex.Observable;
 
 
 /*
-El operador skip() es el opuesto de el operador take(). Este ignorara el numero especificado
-de emisiones y entonces emite los primeros que prosiguen. Si yo queria skip las primeras
+El operador Skip() es el opuesto de el operador Take(). Este ignorara el numero especificado
+de emisiones y entonces emite los primeros que prosiguen. Si yo queria Skip las primeras
 90 emisiones de un Observable(), yo podria usar este operador, como muestro en el pequeno
 fragmento de codigo.
  */
-public class skip {
+public class Skip {
 
   public static void main(String[] args) {
 

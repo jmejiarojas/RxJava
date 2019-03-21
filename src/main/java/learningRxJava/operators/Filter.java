@@ -3,15 +3,15 @@ package learningRxJava.operators;
 import io.reactivex.Observable;
 
 /*
-The filter operator acepta Predicate<T> para obtener un Observable<T>. Esto significa
+The Filter operator acepta Predicate<T> para obtener un Observable<T>. Esto significa
 que tu provees una lambda que cualifique o evalue cada emision para mapear a un valor
 boleano, y emisiones con valor false no avanzaran.
 
-En el siguiente ejemplo, tu puedes usar filter() para solo permitir emisiones que tengan
+En el siguiente ejemplo, tu puedes usar Filter() para solo permitir emisiones que tengan
 5 caracteres de longitud.
  */
 
-public class filter {
+public class Filter {
 
   public static void main(String[] args) {
 
