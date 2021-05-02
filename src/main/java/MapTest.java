@@ -14,11 +14,11 @@ public class MapTest {
     Observable<String> observable = Observable.fromArray(letters);
 
     observable
-            .map(String::toUpperCase)
-            .subscribe(
-                   letter ->  result += letter,
-                    Throwable::printStackTrace
-            );
+        .map(String::toUpperCase)
+        .subscribe(
+            letter -> result += letter,
+            Throwable::printStackTrace
+        );
 
     System.out.println(result);
 

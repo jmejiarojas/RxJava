@@ -23,14 +23,14 @@ public class LauncherErrorOperators {
     // Se quiere que se almacene en un Observable de Integers con las longitudes de las cadenas
     // Luego se va a filtrar los que la longitud sea mayor o igual a 5
     Observable<Integer> lenghts = source
-            .map( x -> x.length());
+        .map(x -> x.length());
 
     Observable<Integer> filters = lenghts
-            .filter( x -> x >= 5);
+        .filter(x -> x >= 5);
 
     // Imprimimos los valores en la consola
     filters
-            .subscribe(System.out::println, Throwable::printStackTrace);
+        .subscribe(System.out::println, Throwable::printStackTrace);
 
   }
 

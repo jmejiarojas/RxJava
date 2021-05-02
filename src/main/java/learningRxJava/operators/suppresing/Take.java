@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -14,8 +14,8 @@ public class Take {
   public static void main(String[] args) {
 
     Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
-            .take(3)
-            .subscribe( s -> System.out.println("Received: " + s));
+        .take(3)
+        .subscribe(s -> System.out.println("Received: " + s));
 
   }
 

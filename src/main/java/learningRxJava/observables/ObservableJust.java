@@ -12,13 +12,13 @@ public class ObservableJust {
 
     // Al hacer esto ya se invoco a OnNext y a OnComplete
     Observable<String> source = Observable.just("Alpha", "Beta", "Gamma", "Delta",
-            "Epsilon");
+        "Epsilon");
 
     // Procedemos a "operarlo" y a imprimirlo por pantalla
     source
-            .map(String::length)
-            .filter(x -> x >= 5)
-            .subscribe( x -> System.out.println("Received: " + x));
+        .map(String::length)
+        .filter(x -> x >= 5)
+        .subscribe(x -> System.out.println("Received: " + x));
 
   }
 

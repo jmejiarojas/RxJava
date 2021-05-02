@@ -1,4 +1,4 @@
-package learningRxJava.observables;
+package learningRxJava.observers;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -16,11 +16,9 @@ public class ObserverSubscribe {
 
   public static void main(String[] args) {
 
-    Observable<String> source =
-            Observable.just("Alpha", "Beta", "Gamma", "Delta",
-                    "Epsilon");
+    Observable<String> source = Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon");
 
-    // Este observador va a recibir emisiones de Integers de un Observable,
+    // Este Observer va a recibir emisiones de Integers de un Observable,
     // en este caso del Observable source.
     Observer<Integer> observer = new Observer<Integer>() {
       @Override
@@ -45,9 +43,9 @@ public class ObserverSubscribe {
     };
 
     source
-            .map(String::length)
-            .filter(x -> x >= 5)
-            .subscribe(observer);
+        .map(String::length)
+        .filter(x -> x >= 5)
+        .subscribe(observer);
 
   }
 

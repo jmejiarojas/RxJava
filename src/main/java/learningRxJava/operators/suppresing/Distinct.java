@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -11,13 +11,12 @@ secuencia de cadenas, como el siguiente ejemplo:
 
 public class Distinct {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Observable.just("Alpha", "Beta", "Gamma", "Delta",
-                "Epsilon")
-                .map(String::length)
-                .distinct()
-                .subscribe(x -> System.out.println("Received: " + x));
-    }
+    Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
+        .map(String::length)
+        .distinct()
+        .subscribe(x -> System.out.println("Received: " + x));
+  }
 
 }

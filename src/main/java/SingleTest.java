@@ -7,13 +7,15 @@ public class SingleTest {
 
     String[] result = {""};
     Single<String> single = Observable.just("Hello")
-            .single("No se pudo transformar a single")
-            .doOnSuccess( cadena -> result[0] += cadena)
-            .doOnError( throwable -> {
-              throw new RuntimeException(throwable.getMessage());
-            });
+        .single("No se pudo transformar a single")
+        .doOnSuccess(cadena -> result[0] += cadena)
+        .doOnError(throwable -> {
+          throw new RuntimeException(throwable.getMessage());
+        });
 
     single.subscribe(s -> System.out.println(s));
 
-  };
+  }
+
+  ;
 }

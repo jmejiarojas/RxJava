@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -12,12 +12,12 @@ todas las subsequentes emisiones avancen.
 
 public class SkipWhile {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Observable.range(1, 100)
-                .skipWhile(x -> x <= 95)
-                .subscribe(x -> System.out.println("Received:" + x));
+    Observable.range(1, 100)
+        .skipWhile(x -> x <= 95)
+        .subscribe(x -> System.out.println("Received:" + x));
 
-    }
+  }
 
 }

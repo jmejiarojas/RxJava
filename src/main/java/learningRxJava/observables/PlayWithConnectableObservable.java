@@ -16,21 +16,21 @@ Usando ConnectableObservable forzamos cada emision a todos los observadores a la
 como "MULTICASTING".
  */
 
-public class ConnectableObservableTest {
+public class PlayWithConnectableObservable {
 
   public static void main(String[] args) {
 
-    ConnectableObservable<String> source = Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
-            .publish();
+    io.reactivex.observables.ConnectableObservable<String> source = Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
+        .publish();
 
     // Set up observer 1
     source
-            .subscribe(x -> System.out.println("Observer 1: " + x));
+        .subscribe(x -> System.out.println("Observer 1: " + x));
 
     // Set up observer 2
     source
-            .map(String::length)
-            .subscribe( x -> System.out.println("Observer 2: " + x));
+        .map(String::length)
+        .subscribe(x -> System.out.println("Observer 2: " + x));
 
     // Fire !!!
     source.connect();

@@ -1,7 +1,6 @@
 package learningRxJava.observables;
 
 import io.reactivex.Observable;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,15 +16,15 @@ public class ObservableFromIterable {
   public static void main(String[] args) {
 
     List<String> items = Arrays.asList("Alpha", "Beta", "Gamma", "Delta",
-            "Epsilon");
+        "Epsilon");
 
     Observable<String> source = Observable.fromIterable(items);
 
     // Procedemos a "operarlo" y a imprimirlo por pantalla
     source
-            .map(String::length)
-            .filter(x -> x >= 5)
-            .subscribe(x -> System.out.println("Received: " + x));
+        .map(String::length)
+        .filter(x -> x >= 5)
+        .subscribe(x -> System.out.println("Received: " + x));
 
   }
 

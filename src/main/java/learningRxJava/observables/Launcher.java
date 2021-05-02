@@ -12,6 +12,7 @@ public class Launcher {
       emitter.onNext("Omega");
       emitter.onNext("Teta");
       emitter.onComplete();
+      //emitter.onNext("jaja");
     });
 
     source.subscribe(x -> System.out.println("Received: " + x));

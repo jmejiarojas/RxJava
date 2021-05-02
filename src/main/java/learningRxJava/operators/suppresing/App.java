@@ -1,3 +1,5 @@
+package learningRxJava.operators.suppresing;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 
@@ -7,9 +9,9 @@ public class App {
     Observable<String> avengers = Observable.create(observableEmitter -> emitAvengers(observableEmitter));
 
     avengers
-            .filter(avenger -> !avenger.equalsIgnoreCase("Loki"))
-            .map(avenger -> avenger + " is a avenger")
-            .subscribe(s -> System.out.println(s));
+        .filter(avenger -> !avenger.equalsIgnoreCase("Loki"))
+        .map(avenger -> avenger + " is a avenger")
+        .subscribe(s -> System.out.println(s));
 
 
   }

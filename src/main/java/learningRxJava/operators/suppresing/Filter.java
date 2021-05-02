@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -16,8 +16,8 @@ public class Filter {
   public static void main(String[] args) {
 
     Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
-            .filter(x -> x.length() != 5)
-            .subscribe(x -> System.out.println("Received: " + x));
+        .filter(x -> x.length() != 5)
+        .subscribe(x -> System.out.println("Received: " + x));
 
   }
 

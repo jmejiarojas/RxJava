@@ -10,9 +10,9 @@ public class App3 {
     String[] letters = {"a", "b", "c", "d", "e", "f", "g"};
     Observable<String> observable = Observable.fromArray(letters);
     observable.subscribe(
-            i -> result += i,  //OnNext
-            Throwable::printStackTrace, //OnError
-            () -> result += "_Completed" //OnCompleted
+        i -> result += i,  //OnNext
+        Throwable::printStackTrace, //OnError
+        () -> result += "_Completed" //OnCompleted
     );
 
     System.out.println(result);

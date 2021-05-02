@@ -24,9 +24,9 @@ public class LauncherErrorOperatorImproved {
     // Luego se va a filtrar los que la longitud sea mayor o igual a 5
     // Por ultimo imprimimos los valores
     source
-            .map( x -> x.length())
-            .filter( x -> x >= 5)
-            .subscribe(System.out::println, Throwable::printStackTrace);
+        .map(x -> x.length())
+        .filter(x -> x >= 5)
+        .subscribe(System.out::println, Throwable::printStackTrace);
 
 
   }

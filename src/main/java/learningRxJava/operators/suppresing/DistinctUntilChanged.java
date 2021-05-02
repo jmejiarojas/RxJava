@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -11,14 +11,14 @@ codigo para ver este comportamiento en accion:
  */
 public class DistinctUntilChanged {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Observable.just(1, 1, 1, 2, 2, 3, 3, 2, 1, 1)
-                .distinctUntilChanged()
-                .subscribe(x -> System.out.println("Received:" + x));
+    Observable.just(1, 1, 1, 2, 2, 3, 3, 2, 1, 1)
+        .distinctUntilChanged()
+        .subscribe(x -> System.out.println("Received:" + x));
 
 
-    }
+  }
 
     /*
     Explicacion de lo que va a salir en pantalla:

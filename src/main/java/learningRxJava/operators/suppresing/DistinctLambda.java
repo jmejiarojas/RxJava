@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -11,13 +11,12 @@ de cada String y usarlo como unicidad, pero emitira las cadenas en lugar de sus 
 
 public class DistinctLambda {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Observable.just("Alpha", "Beta", "Gamma", "Delta",
-                "Epsilon")
-                .distinct(x -> x.length()) // String::lenght
-                .subscribe(x -> System.out.println("Received: " + x));
+    Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
+        .distinct(x -> x.length()) // String::lenght
+        .subscribe(x -> System.out.println("Received: " + x));
 
-    }
+  }
 
 }

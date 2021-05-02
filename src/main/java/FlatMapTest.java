@@ -9,10 +9,8 @@ public class FlatMapTest {
     Observable<String> observable = Observable.fromArray(letters);
 
     observable
-            .flatMap( letter -> mapToObservable(letter))
-            .subscribe(
-                    letter -> System.out.println(letter)
-            );
+        .flatMap(letter -> mapToObservable(letter))
+        .subscribe(System.out::println);
 
 
   }

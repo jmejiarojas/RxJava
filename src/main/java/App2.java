@@ -9,11 +9,11 @@ public class App2 {
     Observable<String> avengersObservable = Observable.fromArray(avengers);
 
     avengersObservable
-            .filter(avenger -> !avenger.equalsIgnoreCase("Loki"))
-            .subscribe(
-                    avenger -> System.out.println(avenger),
-                    Throwable::printStackTrace,
-                    () -> System.out.println("completed!!")
-            );
+        .filter(avenger -> !avenger.equalsIgnoreCase("Loki"))
+        .subscribe(
+            avenger -> System.out.println(avenger),
+            Throwable::printStackTrace,
+            () -> System.out.println("completed!!")
+        );
   }
 }

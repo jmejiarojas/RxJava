@@ -1,7 +1,6 @@
 package learningRxJava.observables;
 
 import io.reactivex.observables.ConnectableObservable;
-
 import java.util.concurrent.TimeUnit;
 
 /*
@@ -15,11 +14,11 @@ public class ObservableIntervalHot {
   public static void main(String[] args) {
 
     ConnectableObservable<Long> seconds = ConnectableObservable
-            .interval(1, TimeUnit.SECONDS)
-            .publish();
+        .interval(1, TimeUnit.SECONDS)
+        .publish();
 
     // Observer 1
-    seconds.subscribe( x -> System.out.println("Observer 1: " + x));
+    seconds.subscribe(x -> System.out.println("Observer 1: " + x));
     seconds.connect();
 
 

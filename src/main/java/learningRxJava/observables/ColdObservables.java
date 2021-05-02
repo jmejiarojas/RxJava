@@ -24,16 +24,15 @@ public class ColdObservables {
 
   public static void main(String[] args) {
 
-    Observable<String> source =
-            Observable.just("Alpha","Beta","Gamma","Delta","Epsilon");
+    Observable<String> source = Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon");
 
     // first observer
     source
-            .subscribe( x -> System.out.println("Observer 1 Received: " + x));
+        .subscribe(x -> System.out.println("Observer 1 Received: " + x));
 
     // second observer
     source
-            .subscribe( x -> System.out.println("Observer 2 Received: " + x));
+        .subscribe(x -> System.out.println("Observer 2 Received: " + x));
 
 
   }

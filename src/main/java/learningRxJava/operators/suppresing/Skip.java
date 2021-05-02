@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -14,8 +14,8 @@ public class Skip {
   public static void main(String[] args) {
 
     Observable.range(1, 100)
-            .skip(90)
-            .subscribe( x -> System.out.println("Received: " + x));
+        .skip(90)
+        .subscribe(x -> System.out.println("Received: " + x));
 
   }
 

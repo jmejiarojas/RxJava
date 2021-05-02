@@ -1,7 +1,6 @@
 package learningRxJava.observables;
 
 import io.reactivex.Observable;
-
 import java.util.concurrent.TimeUnit;
 
 /*
@@ -19,7 +18,7 @@ public class ObservableIntervalCold {
     Observable<Long> seconds = Observable.interval(1, TimeUnit.SECONDS);
 
     // Observer 1
-    seconds.subscribe( x -> System.out.println("Observer 1: " + x));
+    seconds.subscribe(x -> System.out.println("Observer 1: " + x));
 
     // sleep 5 seconds
     sleep(5000);

@@ -1,4 +1,4 @@
-package learningRxJava.operators;
+package learningRxJava.operators.suppresing;
 
 import io.reactivex.Observable;
 
@@ -10,13 +10,13 @@ distinctUntilChanged() con cadenas codificadas en sus longitudes.
 
 public class DistinctUntilChangedLambda {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Observable.just("Alpha", "Beta", "Zeta", "Eta", "Gamma", "Delta")
-                .distinctUntilChanged(String::length)
-                .subscribe(x -> System.out.println("Received: " + x));
+    Observable.just("Alpha", "Beta", "Zeta", "Eta", "Gamma", "Delta")
+        .distinctUntilChanged(String::length)
+        .subscribe(x -> System.out.println("Received: " + x));
 
-    }
+  }
 
     /*
     Nota que "Zeta" ha sido omitido porque este viene directo despues de "Beta", el cual tiene

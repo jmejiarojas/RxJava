@@ -14,7 +14,7 @@ public class LauncherWithError {
         emitter.onNext("Omega");
         emitter.onNext("Teta");
         emitter.onComplete();
-      }catch (Throwable e){
+      } catch (Throwable e) {
         emitter.onError(e);
       }
     });

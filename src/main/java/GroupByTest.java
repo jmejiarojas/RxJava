@@ -1,5 +1,4 @@
 import io.reactivex.Observable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,19 +12,17 @@ public class GroupByTest {
     Integer[] numbers = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     Observable.fromArray(numbers)
-            .groupBy(number -> (number % 2 == 0) ? "EVEN" : "ODD")
-            .subscribe(stringIntegerGroupedObservable ->
-                    stringIntegerGroupedObservable.subscribe(number -> {
-                      if (stringIntegerGroupedObservable.getKey().equals("EVEN")) {
-                        evenList.add(number);
-                      } else {
-                        oddsList.add(number);
-                      }
-                    }));
+        .groupBy(number -> (number % 2 == 0) ? "EVEN" : "ODD")
+        .subscribe(group ->
+            group.subscribe(number -> {
+              if (group.getKey().equals("EVEN")) {
+                evenList.add(number);
+              } else {
+                oddsList.add(number);
+              }
+            }));
 
     System.out.println(evenList);
     System.out.println(oddsList);
-
   }
-
 }
